@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "youtube-video-resumer"
+version = "0.1.0"
+description = ""
+authors = ["Rafael <rafaeloc.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ffmpeg = "^1.4"
+pytubefix = "^8.3.0"
+openai = "^1.53.0"
+
+[tool.poetry.scripts]
+resume = "youtube_video_resumer.main:resume"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
