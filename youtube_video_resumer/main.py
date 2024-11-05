@@ -1,5 +1,3 @@
-# Baixar audio do vídeo
-
 import os
 from pytubefix import Playlist, YouTube
 from pytubefix.cli import on_progress
@@ -18,15 +16,18 @@ def download_playlist_audios(url, audios_path):
 
     for url in video_urls:
         download_audio(url, audios_path)
+        break
 
 
-# Transcrição do áudio
-# Fazer resumo com IA
-def resume():
+if __name__ == "__main__":
     url = "https://www.youtube.com/watch?v=69pvhO6mK_o&list=PL2g2h-wyI4Spf5rzSmesewHpXYVnyQ2TS"
     audios_path = "youtube_video_resumer/audios"
 
     if not os.path.exists(path=audios_path):
         os.mkdir(path=audios_path)
 
+    # Baixar audios dos vídeos
     download_playlist_audios(url, audios_path)
+
+    # Transcrição dos áudios
+    # Fazer resumo
