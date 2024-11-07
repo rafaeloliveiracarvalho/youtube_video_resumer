@@ -1,3 +1,5 @@
 **/audios/*
+**/transcripts/*
 poetry.lock
 **/__pycache__
+.env
